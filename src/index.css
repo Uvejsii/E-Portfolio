@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: rgb(33, 36, 40);
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background-color: rgba(33, 36, 40, 0.8705882353);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+    backdrop-filter: blur(5px) !important;
+}
+
+.logo {
+    width: 80px;
+}
+
+.top-main-wrapper {
+    margin-top: 80px !important;
+}
+
+.hello-txt {
+    color: rgb(176, 189, 184);
+}
+
+.main-txt {
+    font-size: 60px;
+}
+
+.name-txt {
+    color: rgb(255, 1, 79);
+}
+
+.details-txt h6 {
+    color: rgb(176, 189, 184);
+    line-height: 23px;
+    letter-spacing: .7px;
+}
+
+.person-image {
+    /*border-radius: 64% 36% 68% 32% / 40% 44% 56% 60%;*/
+}
+
+.grey-color-txt, .project-desc small {
+    color: rgb(176, 189, 184);
+}
+
+.p-timeline-event-separator {
+    color: red !important;
+    background: red !important;
+    border: 1px solid red;
+}
+
+.socials li a {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 7px;
+    transition: .4s;
+    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+}
+
+.socials li a:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+}
+
+.cv-container {
+    /*display: inline-block;*/
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 7px;
+    transition: .4s;
+    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+}
+
+.cv-container:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+    cursor: pointer;
+}
+
+.techno-image {
+    display: inline-block;
+    width: 130px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 7px;
+    transition: .4s;
+    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+}
+
+.techno-image:hover {
+    scale: 1.2;
+    border: 1px solid rgb(255, 1, 79);
+}
+
+/*.project-name {*/
+/*    color: rgb(255, 1, 79);*/
+/*}*/
+
+/*.project-technologies span:hover {*/
+/*    color: rgb(255, 1, 79) !important;*/
+/*    transition: .3s;*/
+/*}*/
+
+.project-card:hover span {
+    transition: .4s;
+    color: rgb(255, 1, 79);
+}
+
+.project-card:hover .project-technologies span {
+    transition: .4s;
+    color: rgb(255, 1, 79) !important;
+}
+
+.scrolltop-component {
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    transition: .4s;
+    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+}
+
+.scrolltop-component:hover {
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+}
+
+.projects-container {
+    padding: 0 120px;
+}
+
+.project-card {
+    transition: .4s ease-in-out !important;
+    background: linear-gradient(145deg, rgb(30, 32, 36), #23272b);
+    box-shadow: 23px 23px 19px #1c1e22, -23px -23px 19px rgb(38, 42, 46);
+    padding: 35px;
+    /*height: 500px;*/
+}
+
+.project-card:hover {
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+}
+
+figure {
+    /*width: 300px;*/
+    height: 230px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+figure img {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-links-icons:hover {
+    transition: .4s;
+    color: rgb(255, 1, 79) !important;
+}
+
+.certificate-card {
+    width: 410px;
+    height: 100px;
+    border-radius: 7px;
+    transition: .4s;
+    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+}
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+}
+
+.certificate-card p {
+    transition: .4s;
+    color: rgb(176, 189, 184);
+}
+
+.certificate-card p:hover a {
+    transition: .4s;
+    color: rgb(255, 1, 79) !important;
+}
+.right-footer {
+    width: 520px;
+}
