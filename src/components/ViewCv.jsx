@@ -17,8 +17,6 @@ const ViewCv = () => {
                                 src="/CV/Uvejs's%20Resume%20Main.pdf"
                                 type="application/pdf"
                                 frameBorder="0"
-                                width="505px"
-                                height="750px"
                             />
                         </div>
                     </div>

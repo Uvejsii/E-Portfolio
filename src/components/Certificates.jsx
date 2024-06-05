@@ -4,7 +4,7 @@ const Certificates = () => {
 
     const certificatesList = [
         {
-            name: 'Responsive Web Design (HTML, CSS)',
+            name: 'Responsive Web Design',
             link: 'https://www.freecodecamp.org/certification/Uvejs_Ahmeti/responsive-web-design',
             from: 'FreeCodeCamp'
         },

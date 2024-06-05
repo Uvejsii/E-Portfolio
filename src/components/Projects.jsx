@@ -1,5 +1,5 @@
-import { Github, Globe } from "react-bootstrap-icons";
-import { Tilt } from 'react-tilt';
+import {Github, Globe} from "react-bootstrap-icons";
+import {Tilt} from 'react-tilt';
 
 const Projects = () => {
     const defaultOptions = {
@@ -27,7 +27,7 @@ const Projects = () => {
             name: 'Earth Lens',
             image: '/project-images/vuejs-earth-lens.png',
             doneWith: 'Vue.js & Bootstrap',
-            desc: 'Built a Vue.js and Bootstrap website with continent-based filtering and detailed country profiles, showcasing skills in web development, data management, and smooth user interface and experience',
+            desc: 'Built a Vue.js and Bootstrap website with continent-based filtering and detailed country profiles, showcasing skills in web development, data management, and smooth user interface and experience.',
             githubLink: 'https://github.com/Uvejsii/REST-Countries-API-with-color-theme-switcher',
             websiteLink: 'https://countries-api-with-theme-switcher.netlify.app/'
         },
@@ -35,7 +35,7 @@ const Projects = () => {
             name: 'E-Shopping',
             image: '/project-images/react-e-shopping.png',
             doneWith: 'React.js & Bootstrap',
-            desc: 'Created an easy-to-use e-shopping platform with React.js and Bootstrap. Key features include product listings, a shopping cart, and order management, all designed for a smooth and enjoyable experience',
+            desc: 'Created an easy-to-use e-shopping platform with React.js and Bootstrap. Key features include product listings, a shopping cart, and order management, all designed for a smooth and enjoyable experience.',
             githubLink: 'https://github.com/Uvejsii/e-shopping-with-react',
             websiteLink: 'https://e-shopping-with-react.netlify.app/'
         },
@@ -43,7 +43,7 @@ const Projects = () => {
             name: 'Online Bookstore',
             image: '/project-images/fullstack-bookstore.png',
             doneWith: 'Vue.js, Bootstrap, C#, MS SQL',
-            desc: 'Built a FullStack Bookstore with Vue.js, Bootstrap, .NET Core, and MS SQL Server. Programmed functional CRUD endpoints and implemented secure RESTful APIs with JWT for smooth frontend-backend interaction',
+            desc: 'Built a FullStack Bookstore with Vue.js, Bootstrap, .NET Core, and MS SQL Server. Programmed functional CRUD endpoints and implemented secure RESTful APIs with JWT for smooth frontend-backend interaction.',
             githubLink: 'https://github.com/Uvejsii/Book-Store-API',
             websiteLink: ''
         },
@@ -55,7 +55,52 @@ const Projects = () => {
             <div className="row g-5 d-flex justify-content-between">
                 {projectList.map((project, index) => (
                     <div key={index} className="col-xl-6 col-lg-9 col-sm-12 mx-auto mb-3">
-                        <Tilt options={defaultOptions}>
+                        <div className="large-screen-project-cards">
+                            <Tilt options={defaultOptions}>
+                                <div className="project-card w-100 rounded-5">
+                                    <figure className="w-100 rounded-3">
+                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                                            <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
+                                        </a>
+                                    </figure>
+                                    <div className="project-details text-light mt-3">
+                                        <div className="project-name">
+                                            <h4 className="fw-bold">
+                                                    <a href={project.websiteLink} target="_blank" className="project-name-link text-light text-decoration-none">
+                                                        {project.name}
+                                                    </a>
+                                            </h4>
+                                        </div>
+                                        <div className="project-desc mb-2">
+                                            <small>{project.desc}</small>
+                                        </div>
+                                        <div className="project-technologies">
+                                            <h5>Done With: <span
+                                                className="text-light fw-bold">{project.doneWith}</span>
+                                            </h5>
+                                        </div>
+                                        <div className="project-links">
+                                            <p className="m-0">Github Repository
+                                                <span className="ms-2">
+                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
+                                           className="text-light project-links-icons fs-5"><Github/></a>
+                                    </span>
+                                            </p>
+                                            <p className="m-0">Live Website
+                                                <span className="ms-2">
+                                    {!project.websiteLink ? (<small className="text-light">-</small>) : (
+                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer"
+                                           className="text-light project-links-icons fs-5"><Globe/>
+                                        </a>
+                                    )}
+                                    </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Tilt>
+                        </div>
+                        <div className="small-screen-project-cards d-none">
                             <div className="project-card w-100 rounded-5">
                                 <figure className="w-100 rounded-3">
                                     <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
@@ -92,7 +137,7 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Tilt>
+                        </div>
                     </div>
                 ))}
             </div>

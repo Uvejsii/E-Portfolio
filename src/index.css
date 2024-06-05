@@ -39,6 +39,10 @@ body {
     color: white !important;
 }
 
+.p-sidebar-close-icon {
+    color: white;
+}
+
 * {
     /*border: 1px solid red;*/
     scroll-behavior: smooth !important;
@@ -46,6 +50,7 @@ body {
 
 .modal-content {
     width: 560px !important;
+    background-color: rgba(33, 36, 40, 0.8705882353);
 }
 
 .logo {
@@ -76,12 +81,6 @@ body {
 
 .grey-color-txt, .project-desc small {
     color: rgb(176, 189, 184);
-}
-
-.p-timeline-event-separator {
-    color: red !important;
-    background: red !important;
-    border: 1px solid red;
 }
 
 .socials li a {
@@ -118,6 +117,11 @@ body {
     cursor: pointer;
 }
 
+embed {
+    width: 505px;
+    height: 750px;
+}
+
 .techno-image {
     display: inline-block;
     width: 130px;
@@ -134,9 +138,9 @@ body {
     border: 1px solid rgb(255, 1, 79);
 }
 
-.project-card:hover span {
+.project-name-link:hover {
     transition: .4s;
-    color: rgb(255, 1, 79);
+    color: rgb(255, 1, 79) !important;
 }
 
 .project-card:hover .project-technologies span {
@@ -166,7 +170,6 @@ body {
     background: linear-gradient(145deg, rgb(30, 32, 36), #23272b);
     box-shadow: 23px 23px 19px #1c1e22, -23px -23px 19px rgb(38, 42, 46);
     padding: 35px;
-    /*height: 500px;*/
 }
 
 .project-card:hover {
@@ -174,7 +177,6 @@ body {
 }
 
 figure {
-    /*width: 300px;*/
     height: 230px;
     margin: 0;
     padding: 0;
@@ -199,7 +201,6 @@ figure img {
 
 .certificate-card {
     width: 410px;
-    height: 100px;
     border-radius: 7px;
     transition: .4s;
     background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
@@ -261,6 +262,11 @@ figure img {
 }
 
 @media (max-width: 992px) {
+    .navbar {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
     .large-navbar {
         display: none !important;
     }
@@ -299,7 +305,85 @@ figure img {
         transform: scaleX(1);
     }
 
+    .top-main-wrapper {
+        margin-top: 50px !important;
+    }
+
+    .large-screen-project-cards {
+        display: none !important;
+    }
+    
+    .small-screen-project-cards {
+        display: block !important;
+    }
+    
     .projects-container {
         padding: 0 10px !important;
+    }
+
+    figure {
+        height: 190px;
+    }
+
+    .project-desc small {
+        font-size: 12px;
+    }
+
+    .project-technologies h5, span {
+        font-size: 18px;
+    }
+
+    .name-txt {
+        font-size: inherit;
+    }
+
+    .left-footer {
+        border: 0 !important;
+        padding: 0 !important;
+    }
+
+    .right-footer {
+        flex-direction: column;
+        justify-content: center !important;
+    }
+
+    .social-media-component, .view-cv-component {
+        display: flex;
+        justify-content: center;
+    }
+
+    .view-cv-wrapper {
+        padding: 0 !important;
+    }
+
+    .view-cv-component {
+        margin: 3rem 0 0 0 !important;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    embed {
+        width: 290px;
+        height: 230px;
+    }
+
+    /*.modal {*/
+    /*    display: flex !important;*/
+    /*    justify-content: center !important;*/
+    /*}*/
+
+    .modal-dialog {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .modal-content {
+        width: fit-content !important;
+    }
+
+    .modal-body {
+        width: fit-content !important;
     }
 }

@@ -13,7 +13,7 @@ const SocialMedia = () => {
                 </li>
                 <li>
                     <a href="https://www.frontendmentor.io/profile/Uvejsii" target="_blank">
-                        <img src="/frontendMentor-logo.svg" alt="frontend-mentor logo"/>
+                        <img src="/logos/frontendMentor-logo.svg" alt="frontend-mentor logo"/>
                     </a>
                 </li>
             </ul>

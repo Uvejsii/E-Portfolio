@@ -27,7 +27,7 @@ const TopMain = () => {
                 </div>
             </div>
             <div className="image-container col-xl-6 col-lg-5 my-auto">
-            <img src="/person-coding-3D.webp" alt="person" className="person-image w-100"/>
+            <img src="/logos/person-coding-3D.webp" alt="person" className="person-image w-100"/>
             </div>
         </div>
     )

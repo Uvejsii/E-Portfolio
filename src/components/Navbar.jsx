@@ -1,6 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
 import {List} from "react-bootstrap-icons";
-import { Sidebar } from 'primereact/sidebar';
+import {Sidebar } from 'primereact/sidebar';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
             });
         }, {
             threshold: 0.1,
-            rootMargin: '0px 0px -50% 0px'
+            rootMargin: '0px 0px -55% 0px'
         });
 
         const sections = document.querySelectorAll('[data-section="true"]');
@@ -46,7 +46,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg fixed-top px-5">
             <div className="container-fluid">
                 <a href="#top">
-                    <img src="/logo.jpg" alt="logo" className="logo border rounded-4"/>
+                    <img src="/logos/logo.jpg" alt="logo" className="logo border rounded-4"/>
                 </a>
                 <div className="large-navbar d-flex justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
@@ -64,10 +64,10 @@ const Navbar = () => {
                 </div>
                 <div className="d-none burger-navbar">
                     <List className="text-light fs-1" onClick={() => setVisible(true)} />
-                    <div className="">
+                    <div>
                         <Sidebar visible={visible} onHide={() => setVisible(false)}
                         className="sidebar-component">
-                            <ul className="navbar-nav">
+                            <ul className="navbar-nav ps-4">
                                 {navbarItems.map((item) => (
                                     <li className={activeSection === item.id ? 'active nav-item position-relative' : 'nav-item position-relative'}
                                         key={item.id}>
