@@ -1,4 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from "./components/Navbar.jsx";
 import TopMain from "./components/TopMain.jsx";
 import Technologies from "./components/Technologies.jsx";
@@ -18,9 +19,10 @@ function App() {
             <hr className="text-light"/>
             <Technologies/>
             <hr className="text-light"/>
-            <Projects/>
-            <hr className="text-light"/>
             <Certificates/>
+            <hr className="text-light"/>
+            <Projects/>
+
             <hr className="text-light"/>
             <Footer/>
             <ScrollTop className="scrolltop-component" icon={<ArrowUp className="text-light"/>}/>

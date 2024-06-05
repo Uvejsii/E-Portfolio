@@ -1,8 +1,7 @@
-import {Github, Globe} from "react-bootstrap-icons";
-import {Tilt} from 'react-tilt'
+import { Github, Globe } from "react-bootstrap-icons";
+import { Tilt } from 'react-tilt';
 
 const Projects = () => {
-
     const defaultOptions = {
         reverse: false,  // reverse the tilt direction
         max: 35,     // max tilt rotation (degrees)
@@ -13,7 +12,7 @@ const Projects = () => {
         axis: null,   // What axis should be disabled. Can be X or Y.
         reset: true,    // If the tilt effect has to be reset on exit.
         easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-    }
+    };
 
     const projectList = [
         {
@@ -48,18 +47,18 @@ const Projects = () => {
             githubLink: 'https://github.com/Uvejsii/Book-Store-API',
             websiteLink: ''
         },
-    ]
+    ];
 
     return (
-        <div className="projects-container my-5" id="projects">
+        <div className="projects-container my-5" id="projects" data-section="true">
             <h1 className="text-light text-center mb-5">Some Of My Projects</h1>
             <div className="row g-5 d-flex justify-content-between">
-                {projectList.map((project) => (
-                    <div key={project.websiteLink} className="col-xl-6 mb-3">
+                {projectList.map((project, index) => (
+                    <div key={index} className="col-xl-6 col-lg-9 col-sm-12 mx-auto mb-3">
                         <Tilt options={defaultOptions}>
                             <div className="project-card w-100 rounded-5">
                                 <figure className="w-100 rounded-3">
-                                    <a href={project.websiteLink} target="_blank">
+                                    <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
                                         <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
                                     </a>
                                 </figure>
@@ -77,14 +76,14 @@ const Projects = () => {
                                     <div className="project-links">
                                         <p className="m-0">Github Repository
                                             <span className="ms-2">
-                                        <a href={project.githubLink} target="_blank"
+                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
                                            className="text-light project-links-icons fs-5"><Github/></a>
                                     </span>
                                         </p>
                                         <p className="m-0">Live Website
                                             <span className="ms-2">
                                     {!project.websiteLink ? (<small className="text-light">-</small>) : (
-                                        <a href={project.websiteLink} target="_blank"
+                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer"
                                            className="text-light project-links-icons fs-5"><Globe/>
                                         </a>
                                     )}
@@ -98,6 +97,7 @@ const Projects = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default Projects;

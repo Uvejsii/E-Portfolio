@@ -21,7 +21,7 @@ const Certificates = () => {
     ]
 
     return (
-        <div className="certificates-wrapper my-5 text-light" id="certificates">
+        <div className="certificates-wrapper my-5 text-light" id="certificates" data-section="true">
             <h1 className="text-light text-center mb-4">Certificates</h1>
             <div className="certificates-card-wrapper d-flex justify-content-center flex-wrap gap-4">
                 {certificatesList.map((certificate) => (

@@ -4,9 +4,9 @@ import ViewCv from "./ViewCv.jsx";
 
 const TopMain = () => {
     return (
-        <div className="top-main-wrapper row mb-5" id="Top">
-            <div className="txt-container col-xl-6 mt-5">
-                <h4 className="hello-txt m-0 d-flex mt-5">HI <PersonRaisedHand class="hello-txt"/></h4>
+        <div className="top-main-wrapper row mb-5" id="top" data-section="true">
+            <div className="txt-container col-xl-6 col-lg-7 mt-5">
+                <h4 className="hello-txt m-0 d-flex mt-5">HI <PersonRaisedHand className="hello-txt"/></h4>
                 <div className="presentation-txt">
                     <h1 className="main-txt text-light">
                         I’m<span className="name-txt"> Uvejs Ahmeti</span> a Frontend Developer
@@ -26,7 +26,7 @@ const TopMain = () => {
                     </div>
                 </div>
             </div>
-            <div className="image-container col-xl-6">
+            <div className="image-container col-xl-6 col-lg-5 my-auto">
             <img src="/person-coding-3D.webp" alt="person" className="person-image w-100"/>
             </div>
         </div>
