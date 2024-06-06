@@ -59,42 +59,74 @@ const Projects = () => {
                             <Tilt options={defaultOptions}>
                                 <div className="project-card w-100 rounded-5">
                                     <figure className="w-100 rounded-3">
-                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                                        {!project.websiteLink ? (
                                             <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
-                                        </a>
+                                        ) : (
+                                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                                                <img src={project.image} alt="project"
+                                                     className="w-100 h-100 bg-light"/>
+                                            </a>
+                                        )}
                                     </figure>
                                     <div className="project-details text-light mt-3">
                                         <div className="project-name">
                                             <h4 className="fw-bold">
-                                                    <a href={project.websiteLink} target="_blank" className="project-name-link text-light text-decoration-none">
+                                                {!project.websiteLink ? (<p className="m-0">{project.name}</p>) : (
+                                                    <a href={project.websiteLink} target="_blank"
+                                                       className="project-name-link text-light text-decoration-none">
                                                         {project.name}
                                                     </a>
+                                                )}
                                             </h4>
                                         </div>
                                         <div className="project-desc mb-2">
                                             <small>{project.desc}</small>
                                         </div>
-                                        <div className="project-technologies">
+                                        <div className="project-technologies my-4">
                                             <h5>Done With: <span
                                                 className="text-light fw-bold">{project.doneWith}</span>
                                             </h5>
                                         </div>
-                                        <div className="project-links">
-                                            <p className="m-0">Github Repository
-                                                <span className="ms-2">
-                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
-                                           className="text-light project-links-icons fs-5"><Github/></a>
-                                    </span>
-                                            </p>
-                                            <p className="m-0">Live Website
-                                                <span className="ms-2">
-                                    {!project.websiteLink ? (<small className="text-light">-</small>) : (
-                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer"
-                                           className="text-light project-links-icons fs-5"><Globe/>
-                                        </a>
-                                    )}
-                                    </span>
-                                            </p>
+                                        <div className="project-links d-flex gap-3">
+                                            {!project.websiteLink ? (
+                                                <>
+                                                    <a href="https://github.com/Uvejsii/bookstore-frontend.git" target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       className="text-light project-links-icons fs-5 w-50">
+                                                        <div className="btn text-light github-repo-btn w-100">
+                                                            Frontend Repository
+                                                            <Github className="ms-1"/>
+                                                        </div>
+                                                    </a>
+                                                    <a href={project.githubLink} target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       className="text-light project-links-icons fs-5 w-50">
+                                                        <div className="btn text-light github-repo-btn w-100">
+                                                            Backend Repository
+                                                            <Github className="ms-1"/>
+                                                        </div>
+                                                    </a>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <a href={project.githubLink} target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       className="text-light project-links-icons fs-5 w-50">
+                                                        <div className="btn text-light github-repo-btn w-100">
+                                                            Github Repository
+                                                            <Github className="ms-1"/>
+                                                        </div>
+                                                    </a>
+                                                    <a href={project.websiteLink} target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       className="text-light project-links-icons fs-5 w-50">
+                                                        <div className="btn text-light web-link-btn w-100">
+                                                            Website Link
+                                                            <Globe className="ms-1"/>
+                                                        </div>
+                                                    </a>
+                                                </>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -103,37 +135,75 @@ const Projects = () => {
                         <div className="small-screen-project-cards d-none">
                             <div className="project-card w-100 rounded-5">
                                 <figure className="w-100 rounded-3">
-                                    <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                                    {!project.websiteLink ? (
                                         <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
-                                    </a>
+                                    ) : (
+                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                                            <img src={project.image} alt="project"
+                                                 className="w-100 h-100 bg-light"/>
+                                        </a>
+                                    )}
                                 </figure>
                                 <div className="project-details text-light mt-3">
                                     <div className="project-name">
-                                        <h4 className="fw-bold"><span>{project.name}</span></h4>
+                                        <h4 className="fw-bold">
+                                            {!project.websiteLink ? (<p className="m-0">{project.name}</p>) : (
+                                                <a href={project.websiteLink} target="_blank"
+                                                   className="project-name-link text-light text-decoration-none">
+                                                    {project.name}
+                                                </a>
+                                            )}
+                                        </h4>
                                     </div>
                                     <div className="project-desc mb-2">
                                         <small>{project.desc}</small>
                                     </div>
-                                    <div className="project-technologies">
-                                        <h5>Done With: <span className="text-light fw-bold">{project.doneWith}</span>
+                                    <div className="project-technologies my-4">
+                                        <h5>Done With: <span
+                                            className="text-light fw-bold">{project.doneWith}</span>
                                         </h5>
                                     </div>
-                                    <div className="project-links">
-                                        <p className="m-0">Github Repository
-                                            <span className="ms-2">
-                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
-                                           className="text-light project-links-icons fs-5"><Github/></a>
-                                    </span>
-                                        </p>
-                                        <p className="m-0">Live Website
-                                            <span className="ms-2">
-                                    {!project.websiteLink ? (<small className="text-light">-</small>) : (
-                                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer"
-                                           className="text-light project-links-icons fs-5"><Globe/>
-                                        </a>
-                                    )}
-                                    </span>
-                                        </p>
+                                    <div className="project-links d-flex gap-3">
+                                        {!project.websiteLink ? (
+                                            <>
+                                                <a href="https://github.com/Uvejsii/bookstore-frontend.git"
+                                                   target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   className="text-light project-links-icons fs-5 w-50">
+                                                    <div className="btn text-light github-repo-btn w-100">
+                                                        Frontend Repository
+                                                        <Github className="ms-1"/>
+                                                    </div>
+                                                </a>
+                                                <a href={project.githubLink} target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   className="text-light project-links-icons fs-5 w-50">
+                                                    <div className="btn text-light github-repo-btn w-100">
+                                                        Backend Repository
+                                                        <Github className="ms-1"/>
+                                                    </div>
+                                                </a>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <a href={project.githubLink} target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   className="text-light project-links-icons fs-5 w-50">
+                                                    <div className="btn text-light github-repo-btn w-100">
+                                                        Github Repository
+                                                        <Github className="ms-1"/>
+                                                    </div>
+                                                </a>
+                                                <a href={project.websiteLink} target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   className="text-light project-links-icons fs-5 w-50">
+                                                    <div className="btn text-light web-link-btn w-100">
+                                                        Website Link
+                                                        <Globe className="ms-1"/>
+                                                    </div>
+                                                </a>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             </div>
