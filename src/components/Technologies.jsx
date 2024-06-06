@@ -5,13 +5,13 @@ const Technologies = () => {
     return (
         <div className="technologies-container my-5 py-4" id="technologies" data-section="true">
             <h1 className="text-light text-center mb-4">Technologies I Use</h1>
-                <div className="technologies-container pt-3">
-                    <div className="d-flex flex-wrap justify-content-center gap-5">
-                        {technologies.map((item) => (
-                            <img key={item} src={item} alt="technology-logo" className="techno-image p-3"/>
-                        ))}
-                    </div>
+            <div className="technologies-container pt-3">
+                <div className="d-flex flex-wrap justify-content-center gap-5">
+                    {technologies.map((item) => (
+                        <img key={item} src={item} alt="technology-logo" className="techno-image p-3"/>
+                    ))}
                 </div>
+            </div>
         </div>
     )
 }

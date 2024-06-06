@@ -1,6 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
 import {List} from "react-bootstrap-icons";
-import {Sidebar } from 'primereact/sidebar';
+import {Sidebar} from 'primereact/sidebar';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -51,7 +51,8 @@ const Navbar = () => {
                 <div className="large-navbar d-flex justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         {navbarItems.map((item) => (
-                            <li className={activeSection === item.id ? 'active nav-item position-relative' : 'nav-item position-relative'} key={item.id}>
+                            <li className={activeSection === item.id ? 'active nav-item position-relative' : 'nav-item position-relative'}
+                                key={item.id}>
                                 <a
                                     href={item.id}
                                     className={activeSection === item.id ? activeStyle : 'nav-link'}
@@ -63,10 +64,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="d-none burger-navbar">
-                    <List className="text-light fs-1" onClick={() => setVisible(true)} />
+                    <List className="text-light fs-1" onClick={() => setVisible(true)}/>
                     <div>
                         <Sidebar visible={visible} onHide={() => setVisible(false)}
-                        className="sidebar-component">
+                                 className="sidebar-component">
                             <ul className="navbar-nav ps-4">
                                 {navbarItems.map((item) => (
                                     <li className={activeSection === item.id ? 'active nav-item position-relative' : 'nav-item position-relative'}

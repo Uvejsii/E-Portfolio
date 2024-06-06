@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    scroll-behavior: smooth !important;
+}
+
 body {
     background-color: rgb(33, 36, 40);
     font-family: "Poppins", sans-serif;
@@ -41,11 +45,6 @@ body {
 
 .p-sidebar-close-icon {
     color: white;
-}
-
-* {
-    /*border: 1px solid red;*/
-    scroll-behavior: smooth !important;
 }
 
 .modal-content {
@@ -266,7 +265,7 @@ figure img {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
-    
+
     .large-navbar {
         display: none !important;
     }
@@ -312,11 +311,11 @@ figure img {
     .large-screen-project-cards {
         display: none !important;
     }
-    
+
     .small-screen-project-cards {
         display: block !important;
     }
-    
+
     .projects-container {
         padding: 0 10px !important;
     }
@@ -363,27 +362,31 @@ figure img {
 }
 
 @media (max-width: 750px) {
-    embed {
-        width: 290px;
-        height: 230px;
+    .social-media-component {
+        text-align: center;
     }
 
+    .view-cv-wrapper {
+        display: none;
+    }
+
+    /*embed {*/
+    /*    width: 290px;*/
+    /*    height: 230px;*/
+    /*}*/
     /*.modal {*/
     /*    display: flex !important;*/
     /*    justify-content: center !important;*/
     /*}*/
-
-    .modal-dialog {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-    }
-
-    .modal-content {
-        width: fit-content !important;
-    }
-
-    .modal-body {
-        width: fit-content !important;
-    }
+    /*.modal-dialog {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: baseline;*/
+    /*}*/
+    /*.modal-content {*/
+    /*    width: fit-content !important;*/
+    /*}*/
+    /*.modal-body {*/
+    /*    width: fit-content !important;*/
+    /*}*/
 }
