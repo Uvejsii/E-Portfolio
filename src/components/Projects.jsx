@@ -50,7 +50,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className="projects-container my-5" id="projects" data-section="true">
+        <div className="projects-wrapper my-5" id="projects" data-section="true">
             <h1 className="text-light text-center mb-5">Some Of My Projects</h1>
             <div className="row g-5 d-flex justify-content-between">
                 {projectList.map((project, index) => (

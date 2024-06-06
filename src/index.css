@@ -121,6 +121,10 @@ embed {
     height: 750px;
 }
 
+.technologies-wrapper {
+    margin: 145px 0 !important;
+}
+
 .techno-image {
     display: inline-block;
     width: 130px;
@@ -160,7 +164,8 @@ embed {
     background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
 }
 
-.projects-container {
+.projects-wrapper {
+    margin: 145px 0 !important;
     padding: 0 120px;
 }
 
@@ -196,6 +201,10 @@ figure img {
 .project-links-icons:hover {
     transition: .4s;
     color: rgb(255, 1, 79) !important;
+}
+
+.certificates-wrapper {
+    margin: 145px 0 !important;
 }
 
 .certificate-card {
@@ -316,10 +325,6 @@ figure img {
         display: block !important;
     }
 
-    .projects-container {
-        padding: 0 10px !important;
-    }
-
     figure {
         height: 190px;
     }
@@ -368,6 +373,14 @@ figure img {
 
     .view-cv-wrapper {
         display: none;
+    }
+
+    .technologies-wrapper, .certificates-wrapper, .projects-wrapper {
+        margin: 60px 0 !important;
+    }
+
+    .projects-wrapper {
+        padding: 0  5px!important;
     }
 
     /*embed {*/
