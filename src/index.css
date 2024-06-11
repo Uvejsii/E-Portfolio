@@ -221,7 +221,7 @@ figure img {
 }
 
 .certificate-card {
-    width: 410px;
+    width: 460px;
     border-radius: 7px;
     transition: .4s;
     background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
