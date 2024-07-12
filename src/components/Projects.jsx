@@ -24,6 +24,14 @@ const Projects = () => {
             websiteLink: 'https://vue-js-e-commerce.netlify.app/'
         },
         {
+            name: 'Online Food Order',
+            image: '/project-images/food_order-logo.jpg',
+            doneWith: 'React.js, Bootstrap, C#, MS SQL',
+            desc: 'Developed a Full Stack Online Food Order with React.js, Redux, .NET Core, and MS SQL Server. Features included smooth browsing, ordering, and admin product management, with secure RESTful API endpoints.',
+            githubLink: 'https://github.com/Uvejsii/OnlineFoodOrderAPI.git',
+            websiteLink: 'https://github.com/Uvejsii/OnlineFoodOrderAPI.git'
+        },
+        {
             name: 'Earth Lens',
             image: '/project-images/vuejs-earth-lens.png',
             doneWith: 'Vue.js & Bootstrap',
