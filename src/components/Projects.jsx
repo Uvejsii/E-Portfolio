@@ -1,17 +1,18 @@
-import {Github, Globe} from "react-bootstrap-icons";
-import {Tilt} from 'react-tilt';
+import { motion } from 'framer-motion';
+import { Github, Globe } from 'react-bootstrap-icons';
+import { Tilt } from 'react-tilt';
 
 const Projects = () => {
     const defaultOptions = {
-        reverse: false,  // reverse the tilt direction
-        max: 35,     // max tilt rotation (degrees)
-        perspective: 3000,   // Transform perspective, the lower, the more extreme the tilt gets.
-        scale: 1.1,    // 2 = 200%, 1.5 = 150%, etc..
-        speed: 1000,   // Speed of the enter/exit transition
-        transition: true,   // Set a transition on enter/exit.
-        axis: null,   // What axis should be disabled. Can be X or Y.
-        reset: true,    // If the tilt effect has to be reset on exit.
-        easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+        reverse: false,
+        max: 35,
+        perspective: 3000,
+        scale: 1.1,
+        speed: 1000,
+        transition: true,
+        axis: null,
+        reset: true,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
     };
 
     const projectList = [
@@ -57,98 +58,45 @@ const Projects = () => {
         },
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
+
     return (
         <div className="projects-wrapper my-5" id="projects" data-section="true">
             <h1 className="text-light text-center mb-5">Some Of My Projects</h1>
-            <div className="row g-5 d-flex justify-content-between">
+            <motion.div
+                className="row g-5 d-flex justify-content-between"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={containerVariants}
+            >
                 {projectList.map((project, index) => (
-                    <div key={index} className="col-xl-6 col-lg-9 col-sm-12 mx-auto mb-3">
-                        <div className="large-screen-project-cards">
-                            <Tilt options={defaultOptions}>
-                                <div className="project-card w-100 rounded-5">
-                                    <figure className="w-100 rounded-3">
-                                        {!project.websiteLink ? (
-                                            <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
-                                        ) : (
-                                            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
-                                                <img src={project.image} alt="project"
-                                                     className="w-100 h-100 bg-light"/>
-                                            </a>
-                                        )}
-                                    </figure>
-                                    <div className="project-details text-light mt-3">
-                                        <div className="project-name">
-                                            <h4 className="fw-bold">
-                                                {!project.websiteLink ? (<p className="m-0">{project.name}</p>) : (
-                                                    <a href={project.websiteLink} target="_blank"
-                                                       className="project-name-link text-light text-decoration-none">
-                                                        {project.name}
-                                                    </a>
-                                                )}
-                                            </h4>
-                                        </div>
-                                        <div className="project-desc mb-2">
-                                            <small>{project.desc}</small>
-                                        </div>
-                                        <div className="project-technologies my-4">
-                                            <h5>Done With: <span
-                                                className="text-light fw-bold">{project.doneWith}</span>
-                                            </h5>
-                                        </div>
-                                        <div className="project-links d-flex gap-3">
-                                            {!project.websiteLink ? (
-                                                <>
-                                                    <a href="https://github.com/Uvejsii/bookstore-frontend.git" target="_blank"
-                                                       rel="noopener noreferrer"
-                                                       className="text-light project-links-icons fs-5 w-50">
-                                                        <div className="btn text-light github-repo-btn w-100">
-                                                            Frontend Repository
-                                                            <Github className="ms-1"/>
-                                                        </div>
-                                                    </a>
-                                                    <a href={project.githubLink} target="_blank"
-                                                       rel="noopener noreferrer"
-                                                       className="text-light project-links-icons fs-5 w-50">
-                                                        <div className="btn text-light github-repo-btn w-100">
-                                                            Backend Repository
-                                                            <Github className="ms-1"/>
-                                                        </div>
-                                                    </a>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <a href={project.githubLink} target="_blank"
-                                                       rel="noopener noreferrer"
-                                                       className="text-light project-links-icons fs-5 w-50">
-                                                        <div className="btn text-light github-repo-btn w-100">
-                                                            Github Repository
-                                                            <Github className="ms-1"/>
-                                                        </div>
-                                                    </a>
-                                                    <a href={project.websiteLink} target="_blank"
-                                                       rel="noopener noreferrer"
-                                                       className="text-light project-links-icons fs-5 w-50">
-                                                        <div className="btn text-light web-link-btn w-100">
-                                                            Website Link
-                                                            <Globe className="ms-1"/>
-                                                        </div>
-                                                    </a>
-                                                </>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            </Tilt>
-                        </div>
-                        <div className="small-screen-project-cards d-none">
-                            <div className="project-card w-100 rounded-5">
+                    <motion.div
+                        key={index}
+                        className="col-xl-6 col-lg-9 col-sm-12 mx-auto mb-3"
+                        variants={cardVariants}
+                    >
+                        <Tilt options={defaultOptions}>
+                            <motion.div className="project-card w-100 rounded-5" variants={cardVariants}>
                                 <figure className="w-100 rounded-3">
                                     {!project.websiteLink ? (
                                         <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
                                     ) : (
                                         <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
-                                            <img src={project.image} alt="project"
-                                                 className="w-100 h-100 bg-light"/>
+                                            <img src={project.image} alt="project" className="w-100 h-100 bg-light"/>
                                         </a>
                                     )}
                                 </figure>
@@ -156,8 +104,7 @@ const Projects = () => {
                                     <div className="project-name">
                                         <h4 className="fw-bold">
                                             {!project.websiteLink ? (<p className="m-0">{project.name}</p>) : (
-                                                <a href={project.websiteLink} target="_blank"
-                                                   className="project-name-link text-light text-decoration-none">
+                                                <a href={project.websiteLink} target="_blank" className="project-name-link text-light text-decoration-none">
                                                     {project.name}
                                                 </a>
                                             )}
@@ -167,25 +114,18 @@ const Projects = () => {
                                         <small>{project.desc}</small>
                                     </div>
                                     <div className="project-technologies my-4">
-                                        <h5>Done With: <span
-                                            className="text-light fw-bold">{project.doneWith}</span>
-                                        </h5>
+                                        <h5>Done With: <span className="text-light fw-bold">{project.doneWith}</span></h5>
                                     </div>
                                     <div className="project-links d-flex gap-3">
                                         {!project.websiteLink ? (
                                             <>
-                                                <a href="https://github.com/Uvejsii/bookstore-frontend.git"
-                                                   target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   className="text-light project-links-icons fs-5 w-50">
+                                                <a href="https://github.com/Uvejsii/bookstore-frontend.git" target="_blank" rel="noopener noreferrer" className="text-light project-links-icons fs-5 w-50">
                                                     <div className="btn text-light github-repo-btn w-100">
                                                         Frontend Repository
                                                         <Github className="ms-1"/>
                                                     </div>
                                                 </a>
-                                                <a href={project.githubLink} target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   className="text-light project-links-icons fs-5 w-50">
+                                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-light project-links-icons fs-5 w-50">
                                                     <div className="btn text-light github-repo-btn w-100">
                                                         Backend Repository
                                                         <Github className="ms-1"/>
@@ -194,17 +134,13 @@ const Projects = () => {
                                             </>
                                         ) : (
                                             <>
-                                                <a href={project.githubLink} target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   className="text-light project-links-icons fs-5 w-50">
+                                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-light project-links-icons fs-5 w-50">
                                                     <div className="btn text-light github-repo-btn w-100">
                                                         Github Repository
                                                         <Github className="ms-1"/>
                                                     </div>
                                                 </a>
-                                                <a href={project.websiteLink} target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   className="text-light project-links-icons fs-5 w-50">
+                                                <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-light project-links-icons fs-5 w-50">
                                                     <div className="btn text-light web-link-btn w-100">
                                                         Website Link
                                                         <Globe className="ms-1"/>
@@ -214,11 +150,11 @@ const Projects = () => {
                                         )}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </motion.div>
+                        </Tilt>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 };

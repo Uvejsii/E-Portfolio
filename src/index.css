@@ -12,7 +12,7 @@ body {
 .navbar {
     background-color: rgba(33, 36, 40, 0.8705882353);
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
-    backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(1px) !important;
 }
 
 .nav-item::before {
@@ -45,6 +45,7 @@ body {
 
 .p-sidebar-close-icon {
     color: white;
+    margin: 20px;
 }
 
 .modal-content {
@@ -53,7 +54,7 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 70px;
 }
 
 .top-main-wrapper {

@@ -1,18 +1,72 @@
-const Technologies = () => {
+import { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
-    const technologies = ['/logos/html-logo.png', '/logos/css-logo.png', '/logos/bootstrap-logo.png', '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/csharp-logo.png', '/logos/sql-logo.png']
+const Technologies = () => {
+    const technologies = [
+        '/logos/html-logo.png', '/logos/css-logo.png', '/logos/bootstrap-logo.png',
+        '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/csharp-logo.png',
+        '/logos/sql-logo.png'
+    ];
+
+    const controls = useAnimation();
+    const ref = useRef(null);
+    const inView = useInView(ref, { threshold: 0.1, triggerOnce: true });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
 
     return (
-        <div className="technologies-wrapper" id="technologies" data-section="true">
+        <motion.div
+            className="technologies-wrapper"
+            id="technologies"
+            data-section="true"
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={containerVariants}
+        >
             <h1 className="text-light text-center mb-5">Technologies I Use</h1>
-            <div className="technologies-container">
-                <div className="d-flex flex-wrap justify-content-center gap-5">
-                    {technologies.map((item) => (
-                        <img key={item} src={item} alt="technology-logo" className="techno-image p-3"/>
+            <motion.div
+                className="technologies-container"
+                variants={containerVariants}
+            >
+                <div className="tech-card d-flex flex-wrap justify-content-center gap-5">
+                    {technologies.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            animate={controls}
+                        >
+                            <img
+                                src={item}
+                                alt="technology-logo"
+                                className="techno-image p-3"
+                            />
+                        </motion.div>
                     ))}
                 </div>
-            </div>
-        </div>
-    )
+            </motion.div>
+        </motion.div>
+    );
 }
+
 export default Technologies;

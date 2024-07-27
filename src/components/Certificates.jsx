@@ -1,7 +1,7 @@
-import {BoxArrowUpRight} from "react-bootstrap-icons";
+import { motion } from 'framer-motion';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
 
 const Certificates = () => {
-
     const certificatesList = [
         {
             name: 'Responsive Web Design',
@@ -23,24 +23,50 @@ const Certificates = () => {
             link: 'https://drive.google.com/file/d/1Y_wjCeSRPt2G86tt1Kx_G7DzRIWDY8xG/view?usp=sharing',
             from: 'AAB College'
         }
-    ]
+    ];
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    };
 
     return (
         <div className="certificates-wrapper my-5 text-light" id="certificates" data-section="true">
             <h1 className="text-light text-center mb-4">Certificates</h1>
-            <div className="certificates-card-wrapper d-flex justify-content-center flex-wrap gap-5">
+            <motion.div
+                className="certificates-card-wrapper d-flex justify-content-center flex-wrap gap-5"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={containerVariants}
+            >
                 {certificatesList.map((certificate) => (
-                    <div key={certificate.link} className="certificate-card text-center p-4">
+                    <motion.div
+                        key={certificate.link}
+                        className="certificate-card text-center p-4"
+                        variants={cardVariants}
+                    >
                         <p className="mb-2 p-0">
-                            <a href={certificate.link} target="_blank" className="grey-color-txt text-decoration-none">
+                            <a href={certificate.link} target="_blank" className="grey-color-txt text-decoration-none" rel="noopener noreferrer">
                                 {certificate.name} <BoxArrowUpRight className="mb-1"/>
                             </a>
                         </p>
                         <p className="m-0">{certificate.from}</p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
-    )
-}
+    );
+};
+
 export default Certificates;
