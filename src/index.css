@@ -230,8 +230,8 @@ figure img {
 }
 
 .certificate-card:hover {
-    transform: translateY(-7px);
-    background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
+    transform: translateY(-7px) !important;
+    background: linear-gradient(145deg, rgb(30, 32, 36), #212225) !important;
 }
 
 .certificate-card p {
@@ -428,6 +428,10 @@ figure img {
 }
 
 @media (max-width: 476px) {
+    .tech-card {
+        gap: 10px !important;
+    }
+
     .project-links {
         flex-direction: column;
     }

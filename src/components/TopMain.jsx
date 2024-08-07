@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { PersonRaisedHand } from 'react-bootstrap-icons';
+import {BoxArrowUpRight, PersonRaisedHand} from 'react-bootstrap-icons';
 import SocialMedia from './SocialMedia.jsx';
 import ViewCv from './ViewCv.jsx';
 
@@ -37,7 +37,7 @@ const TopMain = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7 }}
                     >
-                        I’m<span className="name-txt"> Uvejs Ahmeti</span> a Frontend Developer
+                        I’m<span className="name-txt"> Uvejs Ahmeti</span> a Software Developer
                     </motion.h1>
                 </div>
                 <div className="details-txt mt-5">
@@ -46,7 +46,9 @@ const TopMain = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        I’m a second-year Computer Science student at AAB College. I use front-end development as a dynamic canvas to enhance user experiences, seamlessly guiding each interaction for better usability and engagement.
+                        I’m a second-year Computer Science student at <a href="https://aab-edu.net/" target="_blank" className="text-light text-decoration-none">
+                        AAB College <BoxArrowUpRight className="mb-1"/></a>. I approach software development as a means to build robust and efficient solutions,
+                        focusing on writing clean, maintainable code that meets user needs and enhances overall system performance.
                     </motion.h6>
                 </div>
                 <motion.div

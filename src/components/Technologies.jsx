@@ -3,8 +3,8 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 const Technologies = () => {
     const technologies = [
-        '/logos/html-logo.png', '/logos/css-logo.png', '/logos/bootstrap-logo.png',
-        '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/csharp-logo.png',
+        '/logos/html-logo.png', '/logos/css-logo.png', '/logos/bootstrap-logo.png', '/logos/download.png',
+        '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/angularjs-logo.png', '/logos/csharp-logo.png',
         '/logos/sql-logo.png'
     ];
 
@@ -55,6 +55,7 @@ const Technologies = () => {
                             variants={cardVariants}
                             initial="hidden"
                             animate={controls}
+                            className="w-auto p-2"
                         >
                             <img
                                 src={item}
