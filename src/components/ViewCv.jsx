@@ -14,7 +14,7 @@ const ViewCv = () => {
                     <div className="modal-content">
                         <div className="modal-body">
                             <embed
-                                src="/CV/Uvejs%20Ahmeti's%20Resume.pdf"
+                                src="/CV/Uvejs%20Ahmeti's%20CV.pdf"
                                 type="application/pdf"
                                 frameBorder="0"
                             />
