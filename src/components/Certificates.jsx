@@ -19,6 +19,16 @@ const Certificates = () => {
             from: 'FreeCodeCamp & Microsoft'
         },
         {
+            name: 'Front End Development Libraries',
+            link: 'https://www.freecodecamp.org/certification/Uvejs_Ahmeti/front-end-development-libraries',
+            from: 'FreeCodeCamp'
+        },
+        {
+            name: 'Back End Development and APIs',
+            link: 'https://www.freecodecamp.org/certification/Uvejs_Ahmeti/back-end-development-and-apis',
+            from: 'FreeCodeCamp'
+        },
+        {
             name: 'Full Stack Application Development',
             link: 'https://drive.google.com/file/d/1Y_wjCeSRPt2G86tt1Kx_G7DzRIWDY8xG/view?usp=sharing',
             from: 'AAB College'

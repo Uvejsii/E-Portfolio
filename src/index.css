@@ -133,8 +133,9 @@ embed {
     object-fit: contain;
     border-radius: 7px;
     transition: .4s;
-    background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
+    /*background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);*/
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px rgb(38, 42, 46);
+    background: linear-gradient(145deg, rgba(40, 42, 46, 0.94), rgba(42, 46, 50, 0.94));
 }
 
 .techno-image:hover {
@@ -389,10 +390,6 @@ figure img {
         text-align: center;
     }
 
-    .view-cv-wrapper {
-        display: none;
-    }
-
     .technologies-wrapper, .certificates-wrapper, .projects-wrapper {
         margin: 60px 0 !important;
     }
@@ -405,26 +402,6 @@ figure img {
         padding: 23px;
         border-radius: 15px !important;
     }
-
-    /*embed {*/
-    /*    width: 290px;*/
-    /*    height: 230px;*/
-    /*}*/
-    /*.modal {*/
-    /*    display: flex !important;*/
-    /*    justify-content: center !important;*/
-    /*}*/
-    /*.modal-dialog {*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    align-items: baseline;*/
-    /*}*/
-    /*.modal-content {*/
-    /*    width: fit-content !important;*/
-    /*}*/
-    /*.modal-body {*/
-    /*    width: fit-content !important;*/
-    /*}*/
 }
 
 @media (max-width: 476px) {

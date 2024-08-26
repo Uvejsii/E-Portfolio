@@ -3,9 +3,9 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 const Technologies = () => {
     const technologies = [
-        '/logos/html-logo.png', '/logos/css-logo.png', '/logos/bootstrap-logo.png', '/logos/download.png',
-        '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/angularjs-logo.png', '/logos/csharp-logo.png',
-        '/logos/sql-logo.png'
+        '/logos/bootstrap-logo.png', "/logos/tailwindcss-logo.png",'/logos/typescript.png',
+        '/logos/react-logo.webp', '/logos/vuejs-logo.png', '/logos/angularjs-logo.png', "/logos/nextjs-logo.png",
+        "/logos/nodejs-logo.png", '/logos/expressjs-logo.png', '/logos/csharp-logo.png', '/logos/sql-logo.png', "/logos/mongodb-logo.png"
     ];
 
     const controls = useAnimation();
@@ -60,7 +60,7 @@ const Technologies = () => {
                             <img
                                 src={item}
                                 alt="technology-logo"
-                                className="techno-image p-3"
+                                className="techno-image p-3 text-white"
                             />
                         </motion.div>
                     ))}

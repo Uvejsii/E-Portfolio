@@ -5,24 +5,13 @@ const ViewCv = () => {
     return (
         <div className="view-cv-wrapper me-4 pe-3">
             <h4 className="text-light">View CV</h4>
-            <div className="cv-container mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <PostcardFill className="text-light fs-3"/>
-            </div>
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div className="modal-dialog modal-dialog-scrollable">
-                    <div className="modal-content">
-                        <div className="modal-body">
-                            <embed
-                                src="/CV/Uvejs%20Ahmeti's%20CV.pdf"
-                                type="application/pdf"
-                                frameBorder="0"
-                            />
-                        </div>
-                    </div>
+            <a href="https://drive.google.com/file/d/17LqR2EwGw4NGwPSsqTogx-hQdzswC8J5/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer">
+                <div className="cv-container mt-3">
+                    <PostcardFill className="text-light fs-3"/>
                 </div>
-            </div>
-        </div>
-    )
+            </a>
+</div>
+)
 }
 export default ViewCv;
