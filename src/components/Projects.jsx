@@ -34,7 +34,7 @@ const Projects = () => {
         },
         {
             name: 'BookBase',
-            image: '/project-images/.net-bookbase.png',
+            image: '/project-images/dotnet-bookbase.png',
             doneWith: '.NET MVC, MS SQL',
             desc: 'Developed a bookstore project with .NET Core MVC, SQL Server, and Entity Framework. The app uses SQL Server for data storage and Entity Framework for ORM, providing a scalable platform for browsing and managing books.',
             githubLink: 'https://github.com/Uvejsii/BookStore_MVC.git',
