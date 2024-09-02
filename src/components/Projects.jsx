@@ -33,6 +33,14 @@ const Projects = () => {
             websiteLink: 'https://github.com/Uvejsii/OnlineFoodOrderAPI.git'
         },
         {
+            name: 'BookBase',
+            image: '/project-images/.net-bookbase.png',
+            doneWith: '.NET MVC, MS SQL',
+            desc: 'Developed a bookstore project with .NET Core MVC, SQL Server, and Entity Framework. The app uses SQL Server for data storage and Entity Framework for ORM, providing a scalable platform for browsing and managing books.',
+            githubLink: 'https://github.com/Uvejsii/BookStore_MVC.git',
+            websiteLink: 'https://github.com/Uvejsii/BookStore_MVC.git'
+        },
+        {
             name: 'Earth Lens',
             image: '/project-images/vuejs-earth-lens.png',
             doneWith: 'Vue.js & Bootstrap',
