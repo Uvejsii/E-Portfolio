@@ -8,8 +8,8 @@ const Navbar = () => {
     const navbarItems = [
         {name: 'Top', id: '#top'},
         {name: 'Technologies', id: '#technologies'},
-        {name: 'Certificates', id: '#certificates'},
         {name: 'Projects', id: '#projects'},
+        {name: 'Certificates', id: '#certificates'},
     ];
 
     const [activeSection, setActiveSection] = useState(null);

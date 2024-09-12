@@ -32,7 +32,22 @@ const Certificates = () => {
             name: 'Full Stack Application Development',
             link: 'https://drive.google.com/file/d/1Y_wjCeSRPt2G86tt1Kx_G7DzRIWDY8xG/view?usp=sharing',
             from: 'AAB College'
-        }
+        },
+        {
+            name: 'Vue 3 Fundamentals',
+            link: 'https://drive.google.com/file/d/1SXpugcoWDue7Raz2hsgxZjty2yzUeObM/view?usp=sharing',
+            from: 'Frontend Masters'
+        },
+        {
+            name: 'Angular 17+ Fundamentals',
+            link: 'https://drive.google.com/file/d/1zISEfAJuijq7UGXZfaODf1h2yJ2dKv5c/view?usp=sharing',
+            from: 'Frontend Masters'
+        },
+        {
+            name: 'Introduction to Next.js 13+',
+            link: 'https://drive.google.com/file/d/1DoJ1V5jyzCzVbX3rnm6lS9NH7S5b9P-w/view?usp=sharing',
+            from: 'Frontend Masters'
+        },
     ];
 
     const containerVariants = {
@@ -54,7 +69,7 @@ const Certificates = () => {
         <div className="certificates-wrapper my-5 text-light" id="certificates" data-section="true">
             <h1 className="text-light text-center mb-4">Certificates</h1>
             <motion.div
-                className="certificates-card-wrapper d-flex justify-content-center flex-wrap gap-5"
+                className="certificates-card-wrapper d-flex justify-content-center flex-wrap gap-4"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}

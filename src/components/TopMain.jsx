@@ -46,7 +46,7 @@ const TopMain = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        I’m a third-year Computer Science student at <a href="https://aab-edu.net/" target="_blank" className="text-light text-decoration-none">
+                        I’m a third-year Computer Science student at <a href="https://aab-edu.net/" target="_blank" className="uni-link text-light text-decoration-none">
                         AAB College <BoxArrowUpRight className="mb-1"/></a>. I approach software development as a means to build robust and efficient solutions,
                         focusing on writing clean, maintainable code that meets user needs and enhances overall system performance.
                     </motion.h6>

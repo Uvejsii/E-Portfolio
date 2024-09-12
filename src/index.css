@@ -73,6 +73,11 @@ body {
     color: rgb(255, 1, 79);
 }
 
+.uni-link:hover {
+    transition: .4s;
+    color: rgb(255, 1, 79) !important;
+}
+
 .details-txt h6 {
     color: rgb(176, 189, 184);
     line-height: 23px;
@@ -115,11 +120,6 @@ body {
     transform: translateY(-5px);
     background: linear-gradient(145deg, rgb(30, 32, 36), #212225);
     cursor: pointer;
-}
-
-embed {
-    width: 505px;
-    height: 750px;
 }
 
 .technologies-wrapper {
@@ -223,7 +223,7 @@ figure img {
 }
 
 .certificate-card {
-    width: 460px;
+    width: 410px;
     border-radius: 7px;
     transition: .4s;
     background: linear-gradient(145deg, rgba(30, 32, 36, 0.94), #23272b);
@@ -407,6 +407,12 @@ figure img {
 @media (max-width: 476px) {
     .tech-card {
         gap: 10px !important;
+    }
+
+    .certificates-wrapper {
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+        font-size: 14px;
     }
 
     .project-links {

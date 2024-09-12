@@ -18,9 +18,9 @@ function App() {
             <hr className="text-light"/>
             <Technologies/>
             <hr className="text-light"/>
-            <Certificates/>
-            <hr className="text-light"/>
             <Projects/>
+            <hr className="text-light"/>
+            <Certificates/>
             <hr className="text-light"/>
             <Footer/>
             <ScrollTop className="scrolltop-component" icon={<ArrowUp className="text-light"/>}/>
