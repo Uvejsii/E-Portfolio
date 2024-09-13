@@ -34,6 +34,11 @@ const Certificates = () => {
             from: 'AAB College'
         },
         {
+            name: 'JavaScript: The Hard Parts',
+            link: 'https://drive.google.com/file/d/1DN0Xk_pB5PNoqwBfmi_ij02q3PplR7jY/view?usp=sharing',
+            from: 'Frontend Masters'
+        },
+        {
             name: 'Vue 3 Fundamentals',
             link: 'https://drive.google.com/file/d/1SXpugcoWDue7Raz2hsgxZjty2yzUeObM/view?usp=sharing',
             from: 'Frontend Masters'
